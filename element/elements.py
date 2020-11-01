@@ -146,10 +146,54 @@ class Element(object):
         """
         根据定位方法获取元素属性值
         :param b: 定位方法
-        :param type: 元素属性：text，resource-id,className,checked,clickable,enabled,selected ....
+        :param type: 元素属性：text，resourceId,className,checkable,clickable,enabled,selected,contentDescription
         :param des: 描述
         :return: 元素属性值
         """
         attr = Element(self).get_ele(b, des).get_attribute(type)
         ExceptionAction().log().info("获取{0}的{1}值".format(str(des), str(type)))
         return attr
+
+    def swipe(self, direction):
+        """
+        屏幕滑动
+        :param direction: up:向上；down:向下；left:向左；right:向右
+        :return:
+        """
+        x = self.driver.get_window_size()['width']
+        y = self.driver.get_window_size()['height']
+        if "up" == direction:
+            star_x = int(1 / 2 * x)
+            star_y = int(3 / 4 * y)
+            end_x = int(star_x)
+            end_y = int(1 / 4 * y)
+
+            ExceptionAction().log().info("向上滑动")
+        elif "down" == direction:
+            star_x = int(1 / 2 * x)
+            star_y = int(1 / 4 * y)
+            end_x = int(star_x)
+            end_y = int(3 / 4 * y)
+            ExceptionAction().log().info("向下滑动")
+        elif "left" == direction:
+            star_x = int(3 / 4 * x)
+            star_y = int(1 / 2 * y)
+            end_x = int(1 / 4 * x)
+            end_y = int(star_y)
+            ExceptionAction().log().info("向左滑动")
+        elif "right" == direction:
+            star_x = int(1 / 4 * x)
+            star_y = int(1 / 2 * y)
+            end_x = int(3 / 4 * x)
+            end_y = int(star_y)
+            ExceptionAction().log().info("向右滑动")
+        self.driver.swipe(star_x, star_y, end_x, end_y, direction=500)
+
+    def tap(self, positions):
+        """
+        根据坐标进行点击操作
+        :param positions: 坐标：[(x1,y1),(x2,y2)]
+        :return:
+        """
+        self.driver.tap(positions, 100)
+        ExceptionAction().log().info("根据坐标点击，坐标{0}".format(str(positions)))

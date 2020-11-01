@@ -27,10 +27,11 @@ class Suite(object):
 
 if __name__ == '__main__':
     suite_tests = Suite()
+    mobile_suite = suite_tests.mobile_suite()
     report_name = "测试报告"
     description = "登录验证"
     report_html = ReportHtml()
-    html_file_path = report_html.build_report(suite_tests.mobile_suite(), report_name, description)
+    html_file_path = report_html.build_report(mobile_suite, report_name, description)
 
     # sent_email = SendEmail()
     # sent_email.sent_email(html_file_path)

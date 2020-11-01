@@ -13,6 +13,7 @@ from element.elements import Element
 from test_action.moblie.android import B
 from test_action.moblie.ios import I
 from function.exception_action import ExceptionAction
+from function.check import CheckAssert
 import sys
 
 
@@ -25,6 +26,7 @@ class MobileAction(object):
         self.platform_name = platform_name
         self.driver = Driver(self.platform_name).mobile_driver
         self.element = Element(self.driver)
+        self.check = CheckAssert()
 
     def login(self, account, pwd):
         """
@@ -55,6 +57,9 @@ class MobileAction(object):
         ExceptionAction().log().info("======执行" + sys._getframe().f_code.co_name + "；参数为：" + locals())
         ExceptionAction().log().info("======执行" + sys._getframe().f_code.co_name + "结束")
         pass
+
+    def check_login(self):
+        self.check.app_check_equal("1", "1", "相等", self.driver)
 
     def teardown(self):
         """

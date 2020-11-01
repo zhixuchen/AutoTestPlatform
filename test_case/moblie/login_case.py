@@ -19,6 +19,7 @@ class LoginCase(unittest.TestCase):
         pwd = "1qaz@WSX"
         MobileCase("Android").mobile_action.login(account, pwd)
 
+
     @staticmethod
     def login_out():
         MobileCase("Android").mobile_action.login_out()
