@@ -11,11 +11,6 @@
 from test_action.moblie.mobile_action import MobileAction
 
 
-class MobileCase(object):
-
-    def __init__(self, platform_name):
-        self.mobile_action = MobileAction(platform_name)
-        self.driver = self.mobile_action.driver
-
-    def teardown(self):
-        self.driver.teardown()
+class MobileCase:
+    def __init__(self):
+        self.mobile_action = MobileAction()

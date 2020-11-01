@@ -2,11 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-@Time : 2020/11/1 11:17
+@Time : 2020/11/2 0:28
 @Author : chenzhixu
 @Email : 1195733026@qq.com
-@File : __init__.py
+@File : __init__.py.py
 @Project : AutoTestPlatform
 """
-
-

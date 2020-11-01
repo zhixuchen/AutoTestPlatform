@@ -20,7 +20,7 @@ class ExceptionAction(object):
         self.image_name = self.name + ".png"
         self.image_path = EXCEPTION_IMAGE_PATH + self.directory_name + '\\'
         self.file_image = self.image_path + self.image_name
-        self.log_name = self.name + ".log"
+        self.log_name = self.directory_name + ".log"
         self.log_path = EXCEPTION_LOG_PATH + self.directory_name + '\\'
         self.file_log = self.log_path + self.log_name
 
@@ -51,8 +51,14 @@ class ExceptionAction(object):
             print("截图失败：%s" % pic_msg)
 
     def log(self):
-        logging.basicConfig(level=logging.INFO,
-                            format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-                            datefmt='%a, %d %b %Y %H:%M:%S',
-                            filename=self.file_log,
-                            filemode='w')
+        try:
+            if not os.path.exists(self.log_path):
+                os.makedirs(self.log_path)
+            logging.basicConfig(level=logging.INFO,
+                                format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
+                                datefmt='%a, %d %b %Y %H:%M:%S',
+                                filename=self.file_log,
+                                filemode='w')
+            return logging
+        except BaseException as msg:
+            print("新建目录失败：%s" % msg)

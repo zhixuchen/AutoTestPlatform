@@ -20,8 +20,8 @@ class Suite(object):
         self.suite = unittest.TestSuite()
 
     def mobile_suite(self):
-        # self.suite.addTest(login_case.LoginCase('login_case'))
-        self.suite.addTest(login_case.LoginCase('login_out'))
+        self.suite.addTest(login_case.LoginCase('login_case'))
+        # self.suite.addTest(login_case.LoginCase('login_out'))
         return self.suite
 
 

@@ -16,6 +16,8 @@ global CHROME_DRIVER_PATH
 global EXCEPTION_IMAGE_PATH
 global REPORT_HTML_PATH
 global CONFIG_PATH
+global EXCEPTION_LOG_PATH
+global MOBILE_ACTION_PLUGIN_PATH
 
 GLOBAL_VARIABLE_PATH = os.path.realpath(os.path.dirname(__file__))
 STATIC_FILE_PATH = os.path.join(os.path.dirname(GLOBAL_VARIABLE_PATH), 'static_file')
@@ -24,3 +26,4 @@ EXCEPTION_LOG_PATH = os.path.join(os.path.realpath(STATIC_FILE_PATH), 'report\\l
 REPORT_HTML_PATH = os.path.join(os.path.realpath(STATIC_FILE_PATH), 'report\\html\\')
 CONFIG_PATH = os.path.join(os.path.realpath(STATIC_FILE_PATH), 'config\\config.ini')
 CHROME_DRIVER_PATH = os.path.join(os.path.realpath(STATIC_FILE_PATH), 'driver\\chromedriver.exe')
+MOBILE_ACTION_PLUGIN_PATH=os.path.join(os.path.realpath(STATIC_FILE_PATH), 'mobile_plugins')

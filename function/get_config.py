@@ -9,8 +9,8 @@
 @Project : AutoTestPlatform
 """
 import configparser
-import logging
 from global_variable import *
+from function.exception_action import ExceptionAction
 
 
 def get(title, string):
@@ -20,4 +20,5 @@ def get(title, string):
         result = config.get(title, string)
         return result
     except Exception as e:
-        logging.error("获取配置报错：" + e)
+        ExceptionAction().log().error("获取配置报错：" + title+"下的"+string+"获取失败")
+        raise Exception(e)
