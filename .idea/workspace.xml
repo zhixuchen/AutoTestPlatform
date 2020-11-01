@@ -19,114 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91e1f286-bf4c-4238-b1a2-1deb5ab5a031" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_driver/auto_driver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/elements.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/mobile/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/mobile/android/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/mobile/ios/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/pc_w/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/shell/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/smip/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element/web/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/function/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/function/exception_action.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_action/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_action/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_action/api/login_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_action/moblie/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_action/moblie/ios/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_action/pc_w/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_action/pc_w/login_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_action/shell/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_action/smip/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_action/web/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_action/web/login_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_case/moblie/login_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_suite/mobile/suite.py" afterDir="false" />
+    <list default="true" id="91e1f286-bf4c-4238-b1a2-1deb5ab5a031" name="Default Changelist" comment="新增ignore文件">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_driver/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_driver/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_driver/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_driver/api/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_driver/api/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_driver/api/request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_driver/mobile/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_driver/mobile/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_driver/mobile/appium_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_driver/mobile/appium_driver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_driver/pc_w/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_driver/pc_w/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_driver/pc_w/pc_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_driver/pc_w/pc_driver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_driver/shell/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_driver/shell/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_driver/smip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_driver/smip/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_driver/web/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_driver/web/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_driver/web/web_chrome_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_driver/web/web_chrome_driver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_function/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_function/check_assert_equal.py" beforeDir="false" afterPath="$PROJECT_DIR$/function/check_assert_equal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_function/exception_action.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_function/get_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/function/get_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_function/report_html.py" beforeDir="false" afterPath="$PROJECT_DIR$/function/report_html.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_function/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/function/send_email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/element_handling/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/element_handling/api/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/element_handling/mobile/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/element_handling/mobile/android/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/element_handling/mobile/ios/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/element_handling/pc_w/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/element_handling/shell/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/element_handling/smip/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/element_handling/web/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/element_handling/web/find_elements.py" beforeDir="false" afterPath="$PROJECT_DIR$/element/web/find_elements.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global_variable/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_variable/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/static_file/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/static_file/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/exception_image/2020-04-30/2020-04-30-14_57_37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/exception_image/2020-04-30/2020-04-30-14_58_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-16_00_25.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-16_05_52.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-16_08_43.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-16_43_59.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-16_45_05.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-17_07_25.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-17_07_49.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-17_08_30.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-17_09_37.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-17_09_53.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-17_10_44.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-17_21_56.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-17_23_39.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-17_23_58.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-17_25_18.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-17_27_19.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-04-30/测试报告2020-04-30-17_28_24.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-05-06/测试报告2020-05-06-14_20_38.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-05-06/测试报告2020-05-06-14_21_33.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-05-06/测试报告2020-05-06-14_24_17.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-05-06/测试报告2020-05-06-14_46_03.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-05-06/测试报告2020-05-06-14_49_00.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/report/html/2020-05-06/测试报告2020-05-06-20_25_24.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/api/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/api/login_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/api/login_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/moblie/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/moblie/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/moblie/android/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_action/moblie/android/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/moblie/android/login_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_action/moblie/mobile_action.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/moblie/ios/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/pc_w/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/pc_w/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/pc_w/login_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/pc_w/login_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/shell/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/shell/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/smip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/smip/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/web/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/web/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/web/login_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/web/login_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/api/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/api/login_suite.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/api/login_suite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/mobile/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/mobile/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/pc_w/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/pc_w/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/pc_w/login_suite.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/pc_w/login_suite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/shell/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/shell/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/smip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/smip/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/web/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/web/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/web/login_suite.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/web/login_suite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/element/elements.py" beforeDir="false" afterPath="$PROJECT_DIR$/element/elements.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,8 +205,23 @@
       <updated>1588214589030</updated>
       <workItem from="1604064777838" duration="7000" />
       <workItem from="1604064883565" duration="2087000" />
-      <workItem from="1604198553501" duration="15626000" />
+      <workItem from="1604198553501" duration="16936000" />
     </task>
+    <task id="LOCAL-00001" summary="更新code">
+      <created>1604218572048</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604218572048</updated>
+    </task>
+    <task id="LOCAL-00002" summary="新增ignore文件">
+      <created>1604218657033</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604218657033</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -344,6 +255,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="更新code" />
+    <MESSAGE value="新增ignore文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增ignore文件" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1237" height="164" key="GridCell.Tab.0.bottom" timestamp="1604218274166">
@@ -366,10 +280,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604200658524" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1604211173869">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1604218670639">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1604211173869" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1604218670639" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1604219157762">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1604219157762" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
