@@ -2,12 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-@version:
-author:c30002875
-@time: 2020/04/30
-@file: web_chrome_driver.py
-@function:
-@modify:
+@Time : 2020/11/1 11:17
+@Author : chenzhixu
+@Email : 1195733026@qq.com
+@File : suite.py
+@Project : AutoTestPlatform
 """
 from global_variable import *
 from selenium import webdriver

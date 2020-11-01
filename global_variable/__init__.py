@@ -2,12 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-@version:
-author:c30002875
-@time: 2020/04/30
-@file: __init__.py.py
-@function:
-@modify:
+@Time : 2020/11/1 11:17
+@Author : chenzhixu
+@Email : 1195733026@qq.com
+@File : __init__.py
+@Project : AutoTestPlatform
 """
 import os
 
@@ -18,9 +17,10 @@ global EXCEPTION_IMAGE_PATH
 global REPORT_HTML_PATH
 global CONFIG_PATH
 
-GLOBAL_VARIABLE_PATH = os.path.abspath(os.path.dirname(__file__))
+GLOBAL_VARIABLE_PATH = os.path.realpath(os.path.dirname(__file__))
 STATIC_FILE_PATH = os.path.join(os.path.dirname(GLOBAL_VARIABLE_PATH), 'static_file')
-EXCEPTION_IMAGE_PATH = os.path.join(os.path.abspath(STATIC_FILE_PATH), 'report\\exception_image\\')
-REPORT_HTML_PATH = os.path.join(os.path.abspath(STATIC_FILE_PATH), 'report\\html\\')
-CONFIG_PATH = os.path.join(os.path.abspath(STATIC_FILE_PATH), 'config\\config.ini')
-CHROME_DRIVER_PATH = os.path.join(os.path.abspath(STATIC_FILE_PATH), 'driver\\chromedriver.exe')
+EXCEPTION_IMAGE_PATH = os.path.join(os.path.realpath(STATIC_FILE_PATH), 'report\\image\\')
+EXCEPTION_LOG_PATH = os.path.join(os.path.realpath(STATIC_FILE_PATH), 'report\\log\\')
+REPORT_HTML_PATH = os.path.join(os.path.realpath(STATIC_FILE_PATH), 'report\\html\\')
+CONFIG_PATH = os.path.join(os.path.realpath(STATIC_FILE_PATH), 'config\\config.ini')
+CHROME_DRIVER_PATH = os.path.join(os.path.realpath(STATIC_FILE_PATH), 'driver\\chromedriver.exe')

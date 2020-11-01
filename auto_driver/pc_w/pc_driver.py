@@ -2,12 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-@version:
-author:c30002875
-@time: 2020/05/06
-@file: pc_driver.py
-@function:
-@modify:
+@Time : 2020/11/1 11:17
+@Author : chenzhixu
+@Email : 1195733026@qq.com
+@File : pc_driver.py
+@Project : AutoTestPlatform
 """
 from pywinauto.application import Application
 

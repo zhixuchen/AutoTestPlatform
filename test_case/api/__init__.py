@@ -2,10 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-@version:
-author:c30002875
-@time: 2020/04/30
-@file: __init__.py.py
-@function:
-@modify:
+@Time : 2020/11/1 11:17
+@Author : chenzhixu
+@Email : 1195733026@qq.com
+@File : __init__.py
+@Project : AutoTestPlatform
 """
