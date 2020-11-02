@@ -18,7 +18,7 @@ class LoginAction(object):
     def __init__(self, platform_name, account, pwd):
         self.platform_name = platform_name
         self.driver = MobileAction().driver(self.platform_name)
-        self.element = MobileAction().element(platform_name)
+        self.element = MobileAction().element(self.driver)
         self.start(account, pwd)
 
     def start(self, account, pwd):
