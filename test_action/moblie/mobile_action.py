@@ -46,6 +46,7 @@ class MobileAction(object):
         :return: 驱动
         """
         self.driver = Driver(platform_name).driver()
+        return self.driver
 
     def element(self, platform_name):
         """
@@ -55,3 +56,4 @@ class MobileAction(object):
         """
         self.driver(platform_name)
         self.element = Element(self.driver)
+        return self.element
