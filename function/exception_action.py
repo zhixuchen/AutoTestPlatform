@@ -10,7 +10,7 @@
 """
 import time
 from global_variable import *
-import logging
+import logging.handlers
 
 
 class ExceptionAction(object):
@@ -54,11 +54,12 @@ class ExceptionAction(object):
         try:
             if not os.path.exists(self.log_path):
                 os.makedirs(self.log_path)
-            logging.basicConfig(level=logging.INFO,
-                                format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-                                datefmt='%a, %d %b %Y %H:%M:%S',
-                                filename=self.file_log,
-                                filemode='w')
-            return logging
+            logger = logging.getLogger()
+            fh = logging.FileHandler(self.file_log, encoding="utf-8", mode="a")
+            formatter = logging.Formatter('%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s')
+            fh.setFormatter(formatter)
+            logger.addHandler(fh)
+            logger.setLevel(logging.INFO)
+            return logger
         except BaseException as msg:
             print("新建目录失败：%s" % msg)
