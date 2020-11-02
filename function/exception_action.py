@@ -55,11 +55,13 @@ class ExceptionAction(object):
             if not os.path.exists(self.log_path):
                 os.makedirs(self.log_path)
             logger = logging.getLogger()
-            fh = logging.FileHandler(self.file_log, encoding="utf-8", mode="a")
-            formatter = logging.Formatter('%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s')
-            fh.setFormatter(formatter)
-            logger.addHandler(fh)
-            logger.setLevel(logging.INFO)
+            if not logger.handlers:
+                fh = logging.FileHandler(self.file_log, encoding="utf-8", mode="a")
+                formatter = logging.Formatter('%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s')
+                fh.setFormatter(formatter)
+                logger.addHandler(fh)
+                logger.setLevel(logging.INFO)
+
             return logger
         except BaseException as msg:
             print("新建目录失败：%s" % msg)
