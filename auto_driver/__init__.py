@@ -28,9 +28,9 @@ class AppDriver(object):
         self.app_package = get(platform_name, "app_package")
         self.automation_name = get(platform_name, "automation_name")
         self.app_activity = get(platform_name, "app_activity")
-        self.xcode_org_id = get(platform_name, "xcode_org_id")
-        self.xcode_signing_id = get(platform_name, "xcode_signing_id")
-        self.ud_id = get(platform_name, "ud_id")
+        self.xcode_org_id = get("iOS", "xcode_org_id")
+        self.xcode_signing_id = get("iOS", "xcode_signing_id")
+        self.ud_id = get("iOS", "ud_id")
         self.mobile_driver = AppIumDriver(platform_name=self.platform_name,
                                           remote_ip=self.remote_ip,
                                           remote_port=self.remote_port,
