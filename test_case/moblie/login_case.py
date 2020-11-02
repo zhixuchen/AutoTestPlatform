@@ -15,11 +15,10 @@ from test_case.moblie import MobileCase
 class LoginCase(unittest.TestCase):
     @staticmethod
     def login_case():
-        account = "chenzhixuandroid"
+        account = "chenzhixurtca"
         pwd = "1qaz@WSX"
-        MobileCase().mobile_action.action_plugins["LoginAction"]("Android",account, pwd)
-
+        MobileCase().mobile_action.action_plugins["LoginAction"]("Android", account=account, pwd=pwd)
 
     @staticmethod
     def login_out():
-        MobileCase("Android").mobile_action.login_out()
+        MobileCase().mobile_action.action_plugins["LoginAction"]("Android")
