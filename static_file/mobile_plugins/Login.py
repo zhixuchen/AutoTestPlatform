@@ -5,7 +5,7 @@
 @Time : 2020/11/1 22:29
 @Author : chenzhixu
 @Email : 1195733026@qq.com
-@File : login_plugin.py
+@File : Login.py
 @Project : AutoTestPlatform
 """
 from function.exception_action import ExceptionAction
@@ -14,7 +14,8 @@ from test_action.moblie.ios import I
 from test_action.moblie.mobile_action import MobileAction
 
 
-class LoginAction(object):
+
+class Login(object):
     def __init__(self, *args, **kwargs):
         self.platform_name = args[0]
         self.driver = MobileAction().driver(self.platform_name)
@@ -54,4 +55,4 @@ class LoginAction(object):
 
 
 def get_plugin_class():
-    return LoginAction
+    return Login

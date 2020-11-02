@@ -17,8 +17,8 @@ class LoginCase(unittest.TestCase):
     def login_case():
         account = "chenzhixurtca"
         pwd = "1qaz@WSX"
-        MobileCase().mobile_action.action_plugins["LoginAction"]("Android", account=account, pwd=pwd)
+        MobileCase().mobile_action.action_plugins["Login"]("Android", account=account, pwd=pwd)
 
     @staticmethod
     def login_out():
-        MobileCase().mobile_action.action_plugins["LoginAction"]("Android")
+        MobileCase().mobile_action.action_plugins["LoginOut"]("Android")
