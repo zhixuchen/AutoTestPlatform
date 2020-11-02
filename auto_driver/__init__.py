@@ -26,7 +26,7 @@ class AppDriver(object):
         self.device_name = get(platform_name, "device_name")
         self.platform_version = get(platform_name, "platform_version")
         self.app_package = get(platform_name, "app_package")
-        self.automation_name = get(platform_name, "app_package")
+        self.automation_name = get(platform_name, "automation_name")
         self.app_activity = get(platform_name, "app_activity")
         self.xcode_org_id = get(platform_name, "xcode_org_id")
         self.xcode_signing_id = get(platform_name, "xcode_signing_id")
