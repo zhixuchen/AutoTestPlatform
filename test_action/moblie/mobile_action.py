@@ -45,7 +45,7 @@ class MobileAction(object):
         :param platform_name: 平台类型
         :return: 驱动
         """
-        self.driver = Driver(platform_name).mobile_driver
+        self.driver = Driver(platform_name).driver()
 
     def element(self, platform_name):
         """
