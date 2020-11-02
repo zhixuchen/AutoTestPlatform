@@ -53,5 +53,4 @@ class LoginAction(object):
 def get_plugin_class():
     return LoginAction
 
-# def get_plugin_class_name():
-#     return self.__class__.__name__
+
