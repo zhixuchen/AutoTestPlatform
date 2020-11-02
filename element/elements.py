@@ -188,7 +188,7 @@ class Element(object):
             end_y = int(star_y)
             ExceptionAction().log().info("向右滑动")
 
-        self.driver.swipe(star_x, star_y, end_x, end_y, direction=500)
+        self.driver.swipe(star_x, star_y, end_x, end_y, duration=500)
 
     def tap(self, positions):
         """
