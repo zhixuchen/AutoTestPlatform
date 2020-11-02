@@ -17,11 +17,12 @@ from test_action.moblie.mobile_action import MobileAction
 class LoginAction(object):
     def __init__(self, platform_name, account, pwd):
         self.platform_name = platform_name
+        self.driver = MobileAction().driver(self.platform_name)
         self.element = MobileAction().element(platform_name)
         self.start(account, pwd)
 
     def start(self, account, pwd):
-        ExceptionAction().log().info("======执行" + self.__class__.__name__ + "；参数为：" + locals())
+        ExceptionAction().log().info("======执行" + self.__class__.__name__ + "；参数为：" + str(locals()))
         try:
             if "Android" == self.platform_name:
                 self.element.click(B.hwmconf_welcome_login_btn, "登录/注册")
@@ -52,5 +53,3 @@ class LoginAction(object):
 
 def get_plugin_class():
     return LoginAction
-
-
