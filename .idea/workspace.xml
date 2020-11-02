@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91e1f286-bf4c-4238-b1a2-1deb5ab5a031" name="Default Changelist" comment="将action修改为插件加入">
+    <list default="true" id="91e1f286-bf4c-4238-b1a2-1deb5ab5a031" name="Default Changelist" comment="修改plugin的模板">
+      <change afterPath="$PROJECT_DIR$/static_file/mobile_plugins/PluginTemplate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_file/mobile_plugins/login_plugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/static_file/mobile_plugins/Login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/moblie/login_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/moblie/login_case.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +32,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Plugin_model" />
       </list>
     </option>
   </component>
@@ -209,7 +209,7 @@
       <workItem from="1604064777838" duration="7000" />
       <workItem from="1604064883565" duration="2087000" />
       <workItem from="1604198553501" duration="20684000" />
-      <workItem from="1604236935383" duration="12872000" />
+      <workItem from="1604236935383" duration="13405000" />
     </task>
     <task id="LOCAL-00001" summary="更新code">
       <created>1604218572048</created>
@@ -239,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604249787492</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改plugin的模板">
+      <created>1604329501770</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604329501770</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -277,49 +284,50 @@
     <MESSAGE value="新增ignore文件" />
     <MESSAGE value="新增element类中方法的描述说明" />
     <MESSAGE value="将action修改为插件加入" />
-    <option name="LAST_COMMIT_MESSAGE" value="将action修改为插件加入" />
+    <MESSAGE value="修改plugin的模板" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改plugin的模板" />
   </component>
   <component name="WindowStateProjectService">
     <state width="663" height="456" key="DebuggerActiveHint" timestamp="1604247545316">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="663" height="456" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1604247545315" />
-    <state width="1237" height="148" key="GridCell.Tab.0.bottom" timestamp="1604329058445">
+    <state width="1237" height="204" key="GridCell.Tab.0.bottom" timestamp="1604329436419">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="148" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604329058445" />
-    <state width="1237" height="148" key="GridCell.Tab.0.center" timestamp="1604329058445">
+    <state width="1237" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604329436419" />
+    <state width="1237" height="204" key="GridCell.Tab.0.center" timestamp="1604329436419">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="148" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604329058445" />
-    <state width="1237" height="148" key="GridCell.Tab.0.left" timestamp="1604329058445">
+    <state width="1237" height="204" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604329436419" />
+    <state width="1237" height="204" key="GridCell.Tab.0.left" timestamp="1604329436419">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="148" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604329058445" />
-    <state width="1237" height="148" key="GridCell.Tab.0.right" timestamp="1604329058445">
+    <state width="1237" height="204" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604329436419" />
+    <state width="1237" height="204" key="GridCell.Tab.0.right" timestamp="1604329436419">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="148" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604329058445" />
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1604249503256">
+    <state width="1237" height="204" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604329436419" />
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1604329436419">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604249503256" />
-    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1604249503252">
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604329436419" />
+    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1604329436419">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1604249503252" />
-    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1604249503249">
+    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1604329436419" />
+    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1604329436419">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1604249503249" />
-    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1604249503254">
+    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1604329436419" />
+    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1604329436419">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1604249503254" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1604329381649">
+    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1604329436419" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1604329949931">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604329381649" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604329949931" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1604249802595">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
