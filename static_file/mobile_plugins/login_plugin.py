@@ -15,15 +15,17 @@ from test_action.moblie.mobile_action import MobileAction
 
 
 class LoginAction(object):
-    def __init__(self, platform_name, account, pwd):
-        self.platform_name = platform_name
+    def __init__(self, *args, **kwargs):
+        self.platform_name = args[0]
         self.driver = MobileAction().driver(self.platform_name)
         self.element = MobileAction().element(self.driver)
-        self.start(account, pwd)
+        self.start(**kwargs)
 
-    def start(self, account, pwd):
+    def start(self, **kwargs):
         ExceptionAction().log().info("======执行" + self.__class__.__name__ + "；参数为：" + str(locals()))
         try:
+            account = kwargs.get("account")
+            pwd = kwargs.get("pwd")
             if "Android" == self.platform_name:
                 self.element.click(B.hwmconf_welcome_login_btn, "登录/注册")
                 self.element.click(B.login_choice_title, "密码登录")
