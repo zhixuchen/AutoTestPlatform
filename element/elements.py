@@ -12,6 +12,7 @@
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from function.exception_action import ExceptionAction
+from selenium.webdriver.common.by import By
 
 
 def ele_click(ele, des=None):
@@ -79,7 +80,7 @@ class Element(object):
         :param des: 描述
         :return:
         """
-        ele = Element(self).get_ele(b, des)
+        ele = self.get_ele(b, des)
         ExceptionAction().log().info("对{0}输入{1}，".format(str(des), str(value)))
         ele.clear()
         ele.send_keys(value)
@@ -92,7 +93,7 @@ class Element(object):
         :return: 如果10秒内展示则返回True,如果10秒内未展示则返回False
         """
         try:
-            Element(self).get_ele(b, des)
+            self.get_ele(b, des)
             ExceptionAction().log().info("等待{0}展示".format(str(des)))
             return True
         except Exception as e:
@@ -106,7 +107,7 @@ class Element(object):
         :param des: 描述
         :return: 元素text的值
         """
-        text = Element(self).get_ele(b, des).text
+        text = self.get_ele(b, des).text
         ExceptionAction().log().info("获取{0}的Text".format(str(des)))
         return text
 
@@ -150,7 +151,7 @@ class Element(object):
         :param des: 描述
         :return: 元素属性值
         """
-        attr = Element(self).get_ele(b, des).get_attribute(type)
+        attr = self.get_ele(b, des).get_attribute(type)
         ExceptionAction().log().info("获取{0}的{1}值".format(str(des), str(type)))
         return attr
 
@@ -167,7 +168,6 @@ class Element(object):
             star_y = int(3 / 4 * y)
             end_x = int(star_x)
             end_y = int(1 / 4 * y)
-
             ExceptionAction().log().info("向上滑动")
         elif "down" == direction:
             star_x = int(1 / 2 * x)
@@ -187,6 +187,7 @@ class Element(object):
             end_x = int(3 / 4 * x)
             end_y = int(star_y)
             ExceptionAction().log().info("向右滑动")
+
         self.driver.swipe(star_x, star_y, end_x, end_y, direction=500)
 
     def tap(self, positions):
@@ -197,3 +198,121 @@ class Element(object):
         """
         self.driver.tap(positions, 100)
         ExceptionAction().log().info("根据坐标点击，坐标{0}".format(str(positions)))
+
+    def tap_mid_screen(self):
+        """
+        点击屏幕中央10*10区域
+        :return:
+        """
+        x = self.driver.get_window_size()['width']
+        y = self.driver.get_window_size()['height']
+        star_x = 1 / 2 * x - 5
+        end_x = star_x + 10
+        star_y = 1 / 2 * y - 5
+        end_y = star_y + 10
+        positions = [(star_x, star_y), (end_x, end_y)]
+        self.tap(positions)
+
+    def is_display(self, b, des=None):
+        """
+        是否加载
+        :param b: 定位元素
+        :param des: 描述
+        :return: Booleam
+        """
+        result = False
+        try:
+            element = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located(b))
+            if element:
+                result = True
+            ExceptionAction().log().info(
+                "定位元素方式：" + b[0] + ";定位元素值：" + b[1] + ";元素操作：检查" + str(des) + "是否加载：" + str(result))
+            return result
+        except Exception as e:
+            ExceptionAction().log().info(
+                "定位元素方式：" + b[0] + ";定位元素值：" + b[1] + ";元素操作：检查" + str(des) + "是否加载：" + str(result))
+            return result
+
+    def is_clickable(self, b):
+        """
+        是否可点击
+        :param b: 定位元素
+        :return:  Booleam
+        """
+        result = False
+        try:
+            element = WebDriverWait(self.driver, 3).until(EC.element_to_be_clickable(b))
+            if element:
+                result = True
+            ExceptionAction().log().info("定位元素方式：" + b[0] + ";定位元素值：" + b[1] + ";元素操作：检查是否可点击：" + str(result))
+            return result
+        except Exception as e:
+            ExceptionAction().log().info("定位元素方式：" + b[0] + ";定位元素值：" + b[1] + ";元素操作：检查是否可点击：" + str(result))
+            return result
+
+    def select_by_text_click(self, b, text, des=None):
+        """
+        select控件选择对应的text进行点击
+        :param b: select控件元素定位
+        :param text: 要点击的text值
+        :param des: 描述
+        :return:
+        """
+        self.click(b, "select控件")
+        b_text = By.XPATH, ("//*[@text='{}']".format(text))
+        self.click(b_text, b_text)
+        ExceptionAction().log().info("定位元素方式：" + b[0] + ";定位元素值：" + b[1] + ";" + str(des) + "操作：选择" + text)
+
+    def check_box_click(self, b, check, des=None):
+        """
+        根据check选中或取消选中check_box控件
+        :param b: 元素定位
+        :param check: 是否选中：True:选中；False:取消选中；
+        :return:
+        """
+        is_check = self.get_attr(b, "checked", des)
+        if is_check == check:
+            ExceptionAction().log().info("check_box的状态与预期一致不需要修改")
+        else:
+            self.click(b)
+            if check:
+                ExceptionAction().log().info("check_box状态从未选中变为选中")
+            else:
+                ExceptionAction().log().info("check_box状态从选中变为未选中")
+
+    def switch_click(self, b, switch, des=None):
+        """
+        根据switch打开或关闭switch控件
+        :param des: 描述
+        :param b:  元素定位
+        :param switch: 开关：True:开；False:关；
+        :return:
+        """
+        is_switch = self.get_attr(b, "checked", des)
+        switch_status = True
+        if is_switch == "false":
+            switch_status = False
+        if switch_status == switch:
+            ExceptionAction().log().info(str(des) + "switch开关的状态与预期一致不需要修改")
+        else:
+            self.click(b)
+            if switch:
+                ExceptionAction().log().info(str(des) + "switch开关状态从关闭变为开启")
+            else:
+                ExceptionAction().log().info(str(des) + "switch开关状态从开启变为关闭")
+
+    def switch_to_web_view(self):
+        contexts = self.driver.contexts
+        web_view_context = None
+        for context in contexts:
+            if "WEBVIEW" in context:
+                ExceptionAction().log().info("切换到web视图")
+                web_view_context = context
+                break
+        if web_view_context is None:
+            ExceptionAction().log().info("视图切换失败")
+        self.driver.switch_to.context(web_view_context)
+
+    def switch_to_native(self):
+        self.driver.switch_to.context("NATIVE_APP")
+        ExceptionAction().log().info("切换到app视图")
