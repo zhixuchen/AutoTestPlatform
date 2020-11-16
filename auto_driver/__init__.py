@@ -9,28 +9,28 @@
 @Project : AutoTestPlatform
 """
 from selenium import webdriver
-from global_variable import *
-from auto_driver.mobile.appium_driver import AppIumDriver
-from function.get_config import get
+from WebforAutoTestPlatform.global_variable import *
+from WebforAutoTestPlatform.auto_driver.mobile.appium_driver import AppIumDriver
+from Test_Platform.models import Config
 
 
 class AppDriver(object):
-    def __init__(self, platform_name):
+    def __init__(self):
         """
         初始化移动端appium驱动
         :param platform_name: 平台类型：iOS ,Android
         """
-        self.platform_name = platform_name
-        self.remote_ip = get("app", "remote_ip")
-        self.remote_port = get("app", "remote_port")
-        self.device_name = get(platform_name, "device_name")
-        self.platform_version = get(platform_name, "platform_version")
-        self.app_package = get(platform_name, "app_package")
-        self.automation_name = get(platform_name, "automation_name")
-        self.app_activity = get(platform_name, "app_activity")
-        self.xcode_org_id = get("iOS", "xcode_org_id")
-        self.xcode_signing_id = get("iOS", "xcode_signing_id")
-        self.ud_id = get("iOS", "ud_id")
+        self.platform_name =str(Config.objects.get(conf_name="app", conf_key="platform"))
+        self.remote_ip = str(Config.objects.get(conf_name="app", conf_key="remote_ip"))
+        self.remote_port = str(Config.objects.get(conf_name="app", conf_key="remote_port"))
+        self.device_name = str(Config.objects.get(conf_name=self.platform_name, conf_key="device_name"))
+        self.platform_version = str(Config.objects.get(conf_name=self.platform_name, conf_key="platform_version"))
+        self.app_package =str( Config.objects.get(conf_name=self.platform_name, conf_key="app_package"))
+        self.automation_name =str( Config.objects.get(conf_name=self.platform_name, conf_key="automation_name"))
+        self.app_activity = str(Config.objects.get(conf_name="Android", conf_key="app_activity"))
+        self.xcode_org_id = str(Config.objects.get(conf_name="iOS", conf_key="xcode_org_id"))
+        self.xcode_signing_id =str( Config.objects.get(conf_name="iOS", conf_key="xcode_signing_id"))
+        self.ud_id = str(Config.objects.get(conf_name="iOS", conf_key="ud_id"))
         self.mobile_driver = AppIumDriver(platform_name=self.platform_name,
                                           remote_ip=self.remote_ip,
                                           remote_port=self.remote_port,
@@ -60,11 +60,7 @@ class WebChromeDriver:
 
 class PcDriver:
     def __init__(self):
-        self.platform_name = get("app", "ios_platform_name")
-        self.app_package = get("app", "app_package")
-        self.app_activity = get("app", "app_activity")
-        self.driver = AppIumDriver(platform_name=self.platform_name, app_package=self.app_package,
-                                   app_activity=self.app_activity).driver
+        pass
 
     def teardown(self):
-        self.driver.teardown()
+        pass
