@@ -9,8 +9,9 @@
 @Project : AutoTestPlatform
 """
 import time
-from global_variable import *
+from WebforAutoTestPlatform.global_variable import *
 import logging.handlers
+from Report_Platform import models
 
 
 class ExceptionAction(object):
@@ -37,7 +38,7 @@ class ExceptionAction(object):
         except BaseException as pic_msg:
             print("截图失败：%s" % pic_msg)
 
-    def app_catch_image(self, driver):
+    def app_catch_image(self, driver, suite_id):
         try:
             if not os.path.exists(self.image_path):
                 os.makedirs(self.image_path)
@@ -47,6 +48,8 @@ class ExceptionAction(object):
         try:
             driver.get_screenshot_as_file(
                 self.file_image)
+            image_path = self.directory_name + "/" + self.image_name
+            models.Image.objects.create(image_name=self.image_name, image_path=image_path, image_suite_id=suite_id)
         except BaseException as pic_msg:
             print("截图失败：%s" % pic_msg)
 
@@ -62,6 +65,16 @@ class ExceptionAction(object):
                 logger.addHandler(fh)
                 logger.setLevel(logging.INFO)
 
+                log_name_list = models.Log.objects.values("log_name")
+
+                islog = True
+                for log_name in log_name_list:
+                    if self.log_name in log_name.get("log_name"):
+                        islog = False
+                        break
+                if islog:
+                    log_path = self.directory_name + "/" + self.log_name
+                    models.Log.objects.create(log_name=self.log_name, log_path=log_path)
             return logger
         except BaseException as msg:
             print("新建目录失败：%s" % msg)
