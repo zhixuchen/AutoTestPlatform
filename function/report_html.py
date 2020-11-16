@@ -11,16 +11,16 @@
 
 from BeautifulReport import BeautifulReport  # 导入BeautifulReport
 
-from global_variable import *
+from WebforAutoTestPlatform.global_variable import *
 import time
-
+from Report_Platform import models
 
 class ReportHtml(object):
     def __init__(self):
         self.directory_name = time.strftime("%Y-%m-%d", time.localtime(time.time()))
         self.html_name = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
 
-    def build_report(self, suite_tests, report_name, description):
+    def build_report(self, suite_tests, report_name,suite_id, description):
         report_name = report_name + self.html_name
         try:
             html_file_path = REPORT_HTML_PATH + self.directory_name + '\\'
@@ -31,6 +31,9 @@ class ReportHtml(object):
         try:
             BeautifulReport(suite_tests).report(filename=report_name, description=description,
                                                 report_dir=html_file_path)
+            report_path=self.directory_name+"/"+report_name+".html"
+            print(report_path)
+            models.WebReport.objects.create(report_name=report_name,report_path=report_path,report_suite_id=suite_id)
             return html_file_path + report_name + '.html'
 
         except BaseException as pic_msg:
