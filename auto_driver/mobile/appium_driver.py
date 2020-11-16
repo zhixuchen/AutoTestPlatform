@@ -9,7 +9,7 @@
 @Project : AutoTestPlatform
 """
 from appium import webdriver
-from function.exception_action import ExceptionAction
+from WebforAutoTestPlatform.function.exception_action import ExceptionAction
 
 
 class AppIumDriver(object):
