@@ -11,7 +11,7 @@
 
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from function.exception_action import ExceptionAction
+from WebforAutoTestPlatform.function.exception_action import ExceptionAction
 from selenium.webdriver.common.by import By
 
 
@@ -155,7 +155,7 @@ class Element(object):
         ExceptionAction().log().info("获取{0}的{1}值".format(str(des), str(type)))
         return attr
 
-    def swipe(self, direction):
+    def ele_swipe(self, direction):
         """
         屏幕滑动
         :param direction: up:向上；down:向下；left:向左；right:向右
