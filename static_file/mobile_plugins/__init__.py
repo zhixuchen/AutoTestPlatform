@@ -8,3 +8,12 @@
 @File : __init__.py.py
 @Project : AutoTestPlatform
 """
+from WebforAutoTestPlatform.static_file.mobile_cases import MobileCase
+
+
+class MobilePlugin(object):
+    def __init__(self,suite_id):
+        self.mobile_plugin = MobileCase(suite_id).mobile_action.action_plugins
+
+    def mobile_plugins(self, plugin_name,  **kwargs):
+        self.mobile_plugin[plugin_name](**kwargs)
