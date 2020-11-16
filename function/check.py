@@ -9,7 +9,7 @@
 @Project : AutoTestPlatform
 """
 import unittest
-from function.exception_action import ExceptionAction
+from WebforAutoTestPlatform.function.exception_action import ExceptionAction
 
 
 class CheckAssert(unittest.TestCase):
@@ -26,11 +26,11 @@ class CheckAssert(unittest.TestCase):
             self.exception.log().error(e)
             raise Exception(e)
 
-    def app_check_equal(self, first, second, msg=None, driver=None):
+    def app_check_equal(self, first, second, msg=None, driver=None,suite_id=None):
         try:
             self.assertEqual(first, second, msg)
         except Exception as e:
             if driver is not None:
-                self.exception.app_catch_image(driver)
+                self.exception.app_catch_image(driver,suite_id)
             self.exception.log().error(e)
             raise Exception(e)
