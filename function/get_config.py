@@ -9,14 +9,15 @@
 @Project : AutoTestPlatform
 """
 import configparser
-from global_variable import *
-from function.exception_action import ExceptionAction
+from WebforAutoTestPlatform.global_variable import *
+from WebforAutoTestPlatform.function.exception_action import ExceptionAction
 
 
 def get(title, string):
     try:
         config = configparser.ConfigParser()
         config.read(CONFIG_PATH)
+
         result = config.get(title, string)
         return result
     except Exception as e:
